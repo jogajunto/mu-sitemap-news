@@ -30,6 +30,18 @@ Add the repository and the package to your main project: In your main composer.j
 }
 ```
 
+Add scripts in composer.json your main project to create load.php in mu-plugins canical folder
+```json
+"scripts": {
+    "post-install-cmd": [
+      "php -r \"file_put_contents('public/wp-content/mu-plugins/load.php', '<?php\rrequire WPMU_PLUGIN_DIR . \\'/mu-sitemap-news/wp_sitemap_news.php\\';');\r\""
+    ],
+    "post-update-cmd": [
+      "php -r \"file_put_contents('public/wp-content/mu-plugins/load.php', '<?php\rrequire WPMU_PLUGIN_DIR . \\'/mu-sitemap-news/wp_sitemap_news.php\\';');\r\""
+    ]
+},
+```
+
 ## Add in hook init WordPress for create sitemap to Google news
 
 Em seu arquivo `<CURRENT_THEME>/functions.php` adicione o hook init com a instrução
