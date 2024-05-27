@@ -1,3 +1,8 @@
 {
-    "type": "wordpress-muplugin"
+    "name": "jogajunto/mu-sitemap-news",
+    "type": "wordpress-muplugin",
+    "description": "A minimalistic WordPress mu-plugin for creating and managing sitemaps efficiently.",
+    "require": {
+        "php": ">=8.1"
+    }
 }
